@@ -3,6 +3,9 @@ import Layout from '../components/Layout'
 import React, { useState } from 'react';
 
 function Contact() {
+
+  const [apiMessage, setApiMessage] = useState('');
+  const apiEndpoint = 'https://tiny-jade-cougar-cap.cyclic.app/hello';
   const fetchData = async () => {
     try {
       const response = await fetch(apiEndpoint);
@@ -16,8 +19,7 @@ function Contact() {
   return (
     <Layout>
       
-  const [apiMessage, setApiMessage] = useState('');
-  const apiEndpoint = 'https://tiny-jade-cougar-cap.cyclic.app/hello';
+ 
   <h1>API Call Example</h1>
       <button onClick={fetchData}>Fetch Data</button>
       {apiMessage && (
