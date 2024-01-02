@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 function Responsive() {
   return (
     <div  className="bg-blue-600" >
+                    <Link to="/about" className="text-white">About</Link>
+
       <Navbar collapseOnSelect expand="lg" >
         <Container>
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
