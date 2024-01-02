@@ -5,7 +5,6 @@ import Footer from "./Footer";
 function Layout({ children }) {
   return (
     <div>
-      <Header />
 
       <main className=" min-h-96" >{children}</main>
       <Footer />

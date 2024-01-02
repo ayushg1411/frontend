@@ -16,10 +16,9 @@ import Responsive from "./components/Responsive";
 function App() {
   return (
     <>
-   
+   <Responsive/>
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/features" element={<Features />} />
