@@ -47,7 +47,7 @@ function Home() {
         <div className="flex px-10 py-10 max-sm:flex-col max-sm:w-full ">
       {/* Content on the left */}
       <div className="w-1/2 p-4 max-sm:w-full">
-        <h1 className="text-2xl font-bold mb-4">Welcome to ParkMe</h1>
+        <h1 className="text-2xl font-bold mb-4">Welcome to the ParkMe</h1>
        <h2  className="text-xl font-semibold mb-4"> Your Hassle-Free Parking Solution</h2>
         <p className='text-justify'>
         At ParkMe, we understand the challenges of finding a convenient and secure parking space for your vehicle. Whether you're a daily commuter, weekend shopper, or event-goer, our platform is designed to make your parking experience seamless and stress-free.
