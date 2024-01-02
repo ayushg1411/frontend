@@ -18,12 +18,12 @@ function Responsive() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto px-32 text-white">
-              <Nav.Link href="/features" className="text-white">Features</Nav.Link>
-              <Nav.Link href="/about" className="text-white">About</Nav.Link>
-              <Link to='/login'>login</Link>
-              <Nav.Link href="/contact" className="text-white">Contact Us</Nav.Link>
-              <Nav.Link href="/booking" className="text-white">        <button className='bg-yellow-300  mt-[1px] rounded-md h-7 w-24 text-[20px]  hover:bg-yellow-500'><p className='font-semibold pb-[3px] text-gray-600 hover:text-white '>Book Now</p></button>
-</Nav.Link>
+              <Link href="/features" className="text-white">Features</Link>
+              <Link href="/about" className="text-white">About</Link>
+             
+              <Link href="/contact" className="text-white">Contact Us</Link>
+              <Link href="/booking" className="text-white">        <button className='bg-yellow-300  mt-[1px] rounded-md h-7 w-24 text-[20px]  hover:bg-yellow-500'><p className='font-semibold pb-[3px] text-gray-600 hover:text-white '>Book Now</p></button>
+</Link>
 
 
               {/* <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
@@ -40,24 +40,24 @@ function Responsive() {
             </Nav>
             <Nav>
          
-              <Nav.Link eventKey={2} href="/sign-up">
+              <Link eventKey={2} href="/sign-up">
              <div className="flex " >
               <PiSignInBold class="signupbar" className="mt-[16px] text-white" />
-              <Nav.Link to="/login" className="text-white">Login</Nav.Link>
+              <Link to="/login" className="text-white">Login</Link>
 
              </div>
              
      
-              </Nav.Link>
-              <Nav.Link eventKey={2} href="/sign-up">
+              </Link>
+              <Link eventKey={2} href="/sign-up">
              <div className="flex " >
               <PiSignInBold class="signupbar" className="mt-[16px] text-white" />
-              <Nav.Link href="/sign-up" className="text-white">Sign Up</Nav.Link>
+              <Link href="/sign-up" className="text-white">Sign Up</Link>
 
              </div>
              
      
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
