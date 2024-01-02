@@ -11,10 +11,12 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Booking from "./pages/Booking";
 import Login from "./pages/Login";
+import Responsive from "./components/Responsive";
 
 function App() {
   return (
     <>
+    <Responsive/>
       <Routes>
         <Route path="/" element={<Home />} />
 

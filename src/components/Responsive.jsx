@@ -22,7 +22,7 @@ function Responsive() {
               <Link to="/about" className="text-white">About</Link>
              
               <Link to="/contact" className="text-white px-3">Contact Us</Link>
-              <Link to="/booking" className="text-white px-3">        <button className='bg-yellow-300  mt-[1px] rounded-md h-7 w-24 text-[20px]  hover:bg-yellow-500'><p className='font-semibold pb-[3px] text-gray-600 hover:text-white '>Book Now</p></button>
+              <Link to="/booking" className="text-white px-3"><button className='bg-yellow-300  mt-[1px] rounded-md h-7 w-24 text-[20px]  hover:bg-yellow-500'><p className='font-semibold pb-[3px] text-gray-600 hover:text-white '>Book Now</p></button>
 </Link>
 
 
