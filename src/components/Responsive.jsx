@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { PiSignInBold } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 
 function Responsive() {
@@ -19,6 +20,7 @@ function Responsive() {
             <Nav className="me-auto px-32 text-white">
               <Nav.Link href="/features" className="text-white">Features</Nav.Link>
               <Nav.Link href="/about" className="text-white">About</Nav.Link>
+              <Link to='/login'>login</Link>
               <Nav.Link href="/contact" className="text-white">Contact Us</Nav.Link>
               <Nav.Link href="/booking" className="text-white">        <button className='bg-yellow-300  mt-[1px] rounded-md h-7 w-24 text-[20px]  hover:bg-yellow-500'><p className='font-semibold pb-[3px] text-gray-600 hover:text-white '>Book Now</p></button>
 </Nav.Link>
@@ -41,7 +43,7 @@ function Responsive() {
               <Nav.Link eventKey={2} href="/sign-up">
              <div className="flex " >
               <PiSignInBold class="signupbar" className="mt-[16px] text-white" />
-              <Nav.Link href="/login" className="text-white">Login</Nav.Link>
+              <Nav.Link to="/login" className="text-white">Login</Nav.Link>
 
              </div>
              
