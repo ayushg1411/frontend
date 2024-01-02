@@ -45,7 +45,6 @@ function Home() {
   
           </div> */}
 
-          <Contact />
         <section className=''>
         <div className="flex px-10 py-10 max-sm:flex-col max-sm:w-full ">
       {/* Content on the left */}
