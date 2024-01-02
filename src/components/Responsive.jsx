@@ -18,7 +18,7 @@ function Responsive() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto px-32 text-white">
-              <Link to="/features" className="text-white px-3">Features</Link>
+              <Link to="https://parkeme.netlify.app/features" className="text-white px-3">Features</Link>
               <Link to="/about" className="text-white">About</Link>
              
               <Link to="/contact" className="text-white px-3">Contact Us</Link>
