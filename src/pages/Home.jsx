@@ -5,6 +5,7 @@ import ph1 from '../assets/Images/ph1.webp'
 import Cards from '../components/Cards'
 import MapCard from '../components/MapCard'
 import CardsHorizontal from '../components/CardsHorizontal'
+import Contact from './Contact'
 function Home() {
   
   return (
@@ -40,9 +41,11 @@ function Home() {
         // Set the desired width
         height="400"
       />
-
+      
   
           </div> */}
+
+          <Contact />
         <section className=''>
         <div className="flex px-10 py-10 max-sm:flex-col max-sm:w-full ">
       {/* Content on the left */}
