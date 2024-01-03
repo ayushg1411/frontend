@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 import Booking from "./pages/Booking";
 import Login from "./pages/Login";
 import Responsive from "./components/Responsive";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 
 

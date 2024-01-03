@@ -9,18 +9,12 @@ const validate = values =>{
 
      let errors={}
 
-    if(!values.name )
-    {
-        errors.name="this field is required"
-    }
+   
     if(!values.email )
     {
         errors.email="this field is required"
     }
-    if(!values.phone )
-    {
-        errors.phone="this field is required"
-    }
+  
     if(!values.password )
     {
         errors.password="this field is required"
@@ -33,17 +27,37 @@ const validate = values =>{
 
 
 const LoginForm = () => {
- 
+
+
+   
+     
+       
         const formik =useFormik({
             initialValues:{
-                name: '',
                 email: '',
-                phone:'',
                 password: ''
             },
-            onSubmit: values=>{
-                console.log(values);
-            },
+            onSubmit: async values => {
+                try {
+                  const response = await fetch('https://slate-gray-capybara-tutu.cyclic.app/api/user/login', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(values),
+                  });
+          
+                  if (!response.ok) {
+                    throw new Error('Login failed');
+                  }
+          
+                  const data = await response.json();
+                  console.log('Login successful:', data);
+                  // You can store the token or user data in your state or context
+                } catch (error) {
+                  console.error('Login error:', error.message);
+                }
+              },
             validate
         });
 
