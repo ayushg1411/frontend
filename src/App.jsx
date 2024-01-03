@@ -12,32 +12,50 @@ import Register from "./pages/Register";
 import Booking from "./pages/Booking";
 import Login from "./pages/Login";
 import Responsive from "./components/Responsive";
+import React, { useEffect, useState } from 'react';
+
+
+
 
 function App() {
   
-  const [apiMessage, setApiMessage] = useState('');
-  const apiEndpoint = 'https://tiny-jade-cougar-cap.cyclic.app/hello';
-  const fetchData = async () => {
-    try {
-      const response = await fetch(apiEndpoint);
-      const data = await response.json();
-      setApiMessage(data.message);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-      setApiMessage('Error fetching data');
-    }
-  };
+  const [userData, setUserData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://slate-gray-capybara-tutu.cyclic.app/api/user/login');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+
+        const data = await response.json();
+        setUserData(data);
+      } catch (error) {
+        setError(error.error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
    <Responsive/>
-   <h1>API Call Example</h1>
-      <button onClick={fetchData}>Fetch Data</button>
-      {apiMessage && (
+   <div>
+    <h1>hii</h1>
+      {userData ? (
         <div>
-          <h2>API Response:</h2>
-          <pre>{JSON.stringify({ message: apiMessage }, null, 2)}</pre>
+          <p>Name: {userData.name}</p>
+          <p>Phone: {userData.phone}</p>
+          <p>Email: {userData.email}</p>
         </div>
+      ) : (
+        <p>Loading...</p>
       )}
+      {error && <p>Error: {error}</p>}
+    </div>
 
       <Routes>
         <Route path="/" element={<Home />} />
